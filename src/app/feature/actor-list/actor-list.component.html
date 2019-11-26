@@ -1,0 +1,9 @@
+<h1>{{title}}</h1>
+<table class="table">
+    <tr>
+        <th><a (click)="sortBy('id')">ID</a></th><th><a (click)="sortBy('lastName')">Name</a></th><th>Action</th>
+    </tr>
+    <tr *ngFor="let a of actors | sort:sortCriteria:sortOrder">
+        <td>{{a.id}}</td><td>{{a.lastName + ", " + a.firstName}}</td><td>E | D</td>
+    </tr>
+</table>

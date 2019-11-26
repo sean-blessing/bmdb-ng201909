@@ -1,0 +1,45 @@
+<div class='component-content'>
+    <div class='lefthalf'>
+        <span class='component-title'>{{title}} </span>
+    </div>
+</div>
+<p *ngIf='!movie'>Loading...</p>
+<div *ngIf='movie'>
+    <main class="single">
+        <table class="table table-sm">
+            <tr>
+                <td>
+                    Title:
+                </td>
+                <td>
+                    <input [(ngModel)]="movie.title" class="rounded" type="text">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Year:
+                </td>
+                <td>
+                    <input [(ngModel)]="movie.year" class="rounded" type="number">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Rating:
+                </td>
+                <td>
+                    <input [(ngModel)]="movie.rating" class="rounded" type="text">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Director:
+                </td>
+                <td>
+                    <input [(ngModel)]="movie.director" class="rounded" type="text">
+                </td>
+            </tr>
+        </table>
+    </main>
+    <span><button (click)="save()" class="btn btn-sm btn-primary">Save</button></span>
+</div>

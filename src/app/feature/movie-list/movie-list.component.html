@@ -1,0 +1,22 @@
+<div class='component-content'>
+    <div class='lefthalf'>
+        <span class='component-title'>{{title}} </span>
+        <span><a routerLink='/movies/create'>
+                <img id='createnew' width='20' height='20' src='assets/add-icon.png' title='Add New'></a>
+        </span>
+    </div>
+</div>
+<table class="table">
+    <tr>
+        <th><a (click)="sortBy('id')">ID</a></th>
+        <th><a (click)="sortBy('title')">Title</a></th>
+        <th><a (click)="sortBy('year')">Year</a></th>
+        <th>Action</th>
+    </tr>
+    <tr *ngFor="let m of movies | sort:sortCriteria:sortOrder">
+        <td>{{m.id}}</td>
+        <td>{{m.title}}</td>
+        <td>{{m.year}}</td>
+        <td>Detail | Edit</td>
+    </tr>
+</table>
