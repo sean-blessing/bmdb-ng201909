@@ -12,6 +12,8 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
 import { MenuComponent } from './core/menu/menu.component';
 import { BaseComponent } from './feature/base/base.component';
 import { MovieCreateComponent } from './feature/movie-create/movie-create.component';
+import { MovieEditComponent } from './feature/movie-edit/movie-edit.component';
+import { MovieDetailComponent } from './feature/movie-detail/movie-detail.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { MovieCreateComponent } from './feature/movie-create/movie-create.compon
     CreditListComponent,
     MenuComponent,
     BaseComponent,
-    MovieCreateComponent
+    MovieCreateComponent,
+    MovieEditComponent,
+    MovieDetailComponent
   ],
   imports: [
     BrowserModule,

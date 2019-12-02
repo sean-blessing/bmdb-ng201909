@@ -10,7 +10,7 @@ import { BaseComponent } from '../base/base.component';
   styleUrls: ['./actor-list.component.css']
 })
 export class ActorListComponent extends BaseComponent implements OnInit {
-  title: string = "Actor-List";
+  title: string = "Actor List";
   actors: Actor[] = [];
 
   constructor(private actorSvc: ActorService) { 

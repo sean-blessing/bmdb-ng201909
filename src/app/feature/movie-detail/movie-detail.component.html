@@ -1,0 +1,34 @@
+<div class="component">
+    <section class="heading">
+        <span class="page-title font-weight-bold font-italic">{{title}}</span>
+        <span> | <a routerLink="/movies/list">Return to list...</a></span>
+    </section>
+    <main class="single">
+        <table class="table table-sm">
+            <tr>
+                <td>Id:</td>
+                <td>{{movie.id}}</td>
+            </tr>
+            <tr>
+                <td>Title:</td>
+                <td><input [(ngModel)]="movie.title" class="rounded" type="text" disabled></td>
+            </tr>
+            <tr>
+                <td>Year:</td>
+                <td><input [(ngModel)]="movie.year" class="rounded" type="text" disabled></td>
+            </tr>
+            <tr>
+                <td>Rating:</td>
+                <td><input [(ngModel)]="movie.rating" class="rounded" type="text" disabled></td>
+            </tr>
+            <tr>
+                <td>Director:</td>
+                <td><input [(ngModel)]="movie.director" class="rounded" type="text" disabled></td>
+            </tr>
+        </table>
+    </main>
+    <span >
+        <span><a routerLink="/movies/edit/{{movie.id}}" class="btn btn-sm btn-warning">Edit</a></span>
+        <span> | <button (click)="delete()" class="btn btn-sm btn-danger">Delete</button></span>
+    </span>
+</div>
