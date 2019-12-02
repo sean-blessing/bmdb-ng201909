@@ -1,0 +1,41 @@
+<div class='component-content'>
+    <div class='lefthalf'>
+        <span class='component-title'>{{title}} </span>
+    </div>
+</div>
+<p *ngIf='!credit'>Loading...</p>
+<div *ngIf='credit'>
+    <main class="single">
+        <table class="table table-sm">
+            <tr>
+                <td>
+                    Movie:
+                </td>
+                <td>
+                    <select [(ngModel)]="credit.movie" class="rounded">
+                        <option *ngFor='let m of movies' [ngValue]='m'>{{m.title}}</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Actor:
+                </td>
+                <td>
+                    <select [(ngModel)]="credit.actor" class="rounded">
+                        <option *ngFor='let a of actors' [ngValue]='a'>{{a.lastName +", " + a.firstName}}</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Role:
+                </td>
+                <td>
+                    <input [(ngModel)]="credit.role" class="rounded" type="text">
+                </td>
+            </tr>
+        </table>
+    </main>
+    <span><button (click)="save()" class="btn btn-sm btn-primary">Save</button></span>
+</div>

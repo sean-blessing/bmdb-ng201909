@@ -14,6 +14,8 @@ import { BaseComponent } from './feature/base/base.component';
 import { MovieCreateComponent } from './feature/movie-create/movie-create.component';
 import { MovieEditComponent } from './feature/movie-edit/movie-edit.component';
 import { MovieDetailComponent } from './feature/movie-detail/movie-detail.component';
+import { CreditCreateComponent } from './feature/credit-create/credit-create.component';
+import { CreditEditComponent } from './feature/credit-edit/credit-edit.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { MovieDetailComponent } from './feature/movie-detail/movie-detail.compon
     BaseComponent,
     MovieCreateComponent,
     MovieEditComponent,
-    MovieDetailComponent
+    MovieDetailComponent,
+    CreditCreateComponent,
+    CreditEditComponent
   ],
   imports: [
     BrowserModule,
