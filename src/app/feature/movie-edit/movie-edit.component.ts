@@ -6,7 +6,7 @@ import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-movie-edit',
-  templateUrl: './movie-edit.component.html',
+  templateUrl: '../movie-maint-shared/movie-maint-shared.component.html',
   styleUrls: ['./movie-edit.component.css']
 })
 export class MovieEditComponent implements OnInit {
