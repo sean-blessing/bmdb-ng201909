@@ -9,10 +9,12 @@ import { MovieEditComponent } from '../feature/movie-edit/movie-edit.component';
 import { MovieDetailComponent } from '../feature/movie-detail/movie-detail.component';
 import { CreditCreateComponent } from '../feature/credit-create/credit-create.component';
 import { CreditEditComponent } from '../feature/credit-edit/credit-edit.component';
+import { UserLoginComponent } from '../feature/user-login/user-login.component';
+import { WelcomeComponent } from '../feature/welcome/welcome.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full'},
-  { path: 'home', component: MovieListComponent},
+  { path: 'home', component: WelcomeComponent},
   { path: 'movies/list', component: MovieListComponent},
   { path: 'movies/create', component: MovieCreateComponent},
   { path: 'movies/edit/:id', component: MovieEditComponent},
@@ -21,7 +23,8 @@ const routes: Routes = [
   { path: 'credits/list', component: CreditListComponent},
   { path: 'credits/create', component: CreditCreateComponent},
   { path: 'credits/edit/:id', component: CreditEditComponent},
-  { path: '**', component: MovieListComponent}
+  { path: 'users/login', component: UserLoginComponent},
+  { path: '**', component: UserLoginComponent}
   ];
 @NgModule({
   declarations: [],

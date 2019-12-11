@@ -13,4 +13,5 @@ export class Actor {
         this.birthDate = birthDate;
         this.gender = gender;
     }
+
 }

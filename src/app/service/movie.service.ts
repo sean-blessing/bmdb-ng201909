@@ -25,6 +25,10 @@ export class MovieService {
     return this.http.post(this.url, movie) as Observable<JsonResponse>;
   }
 
+  update(movie: Movie): Observable<JsonResponse> {
+    return this.http.put(this.url, movie) as Observable<JsonResponse>;
+  }
+
   delete(id: number): Observable<JsonResponse> {
     return this.http.delete(this.url+id) as Observable<JsonResponse>;
   }
